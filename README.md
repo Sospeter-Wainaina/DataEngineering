@@ -1,2 +1,3 @@
 # DataEngineering
-My learnings of every day
+My learnings of every day on becoming a Data Engineer
+
