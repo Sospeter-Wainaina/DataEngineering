@@ -41,9 +41,43 @@ class Emp:
     def __add__(self,other):
         return self.pay + other.pay
 
-employee_1 = Emp('Sospeter','Wainaina',120000)
-employee_2 = Emp('Alice','Nungari',50000)
-print(employee_1.email)
-print(employee_2.email)
-print(employee_1.__repr__())
-print(employee_1+employee_2)
+# employee_1 = Emp('Sospeter','Wainaina',120000)
+# employee_2 = Emp('Alice','Nungari',50000)
+# print(employee_1.email)
+# print(employee_2.email)
+# print(employee_1.__repr__())
+# print(employee_1+employee_2)
+
+# lets define two lists
+x = [1,2,3]
+y = [4,5]
+# You will see that when we add them together it will concatenate them
+print(x+y)
+
+#same with strings
+print('a'+'b')
+
+#for integers it behaves differently because it adds them together
+print(1+2)
+
+class Person:
+    def __init__(self,name):
+        self.name = name
+
+    def __repr__(self):
+        return f"Person('{self.name}')"
+
+    def __mul__(self,other):
+        if type(other) is not int:
+            raise TypeError('Can only multiply by integers')
+        return self.name * other
+
+    def __len__(self):
+        return len(self.name)
+p1 = Person('Sospeter')
+# when we print p1, we get the location of the object in memory
+# This is because we have not defined a __repr__ or __str__ method
+# which tells python how to print the object
+print(p1)
+print(p1*3)
+print(len(p1))
