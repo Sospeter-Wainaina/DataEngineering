@@ -31,3 +31,22 @@ def func4(y=None,x=None):
     return x
 
 print(func4([10,11,12],3))
+
+# We can also use decorators to time functions
+import time
+
+def timer(f):
+    def wrapper(*args,**kwargs):
+        start = time.time()
+        print("Started")
+        rv = f(*args,**kwargs)
+        time_taken = time.time() - start
+        print(f"Time taken is {time_taken}")
+        return rv
+    return wrapper
+@timer
+def calc1(b):
+    for _ in range(b):
+        x = b**b
+    return x
+calc1(10000)
