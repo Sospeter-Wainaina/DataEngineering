@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import Counter, namedtuple
 
 a = "aaaaakbkkkbkvkjbiiiurgbkjbk"
 print(Counter(a))
@@ -8,5 +8,10 @@ for k,v in Counter(a).items():
         print(f"{k} is the most popular item with {v} occurrences")
     # print(k,v)
 
-b = [1,2,2,2,2,2,3,4,5,5,55,66,75,4,33,3,2,3,44,45,5,6,6]
-print(Counter(b))
+# print(Counter(a).most_common(1))
+# print(Counter(a).most_common(1)[0][0]) # this will print the most common item in the string a
+
+Person = namedtuple(field_names = ['name','age','city'],typename='Person')
+
+p1  = Person('Sospeter',23,'Kiambu')
+print(help(p1))
