@@ -56,5 +56,30 @@ mylist5 = [5,3,7,8,-3,1,-7,1,3,6]
 mylist5.sort()
 print(mylist5)
 
+#Slicing in lists
+#we can slice a list like so
+print(mylist5)
+a = mylist5[::-1] # this will reverse the list
+print(a)
+
+# We can also copy a list
+b = mylist.copy()
+print(mylist)
+print(b)
+
+# if we copy by assigning
+b = mylist
+# if we change b we will also change mylist hence we use the copy method
+# we can also concat two lists
+c = mylist + mylist5
+print(c)
+
+#list comprehension
+
+d = [i**2 for i in mylist5]
+print(d)
+
+e = [e**3 for e in range(9)]
+print(e)
 
 
