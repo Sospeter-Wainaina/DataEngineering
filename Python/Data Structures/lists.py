@@ -46,5 +46,15 @@ print(mylist)
 mylist.remove("lemon")
 print(mylist)
 
-# we can clear all the elements in a list
+# we can clear all the elements in a list using the clear method
+# mylist.clear()
+# print(mylist)
+
+# we can alsosort a list like so
+
+mylist5 = [5,3,7,8,-3,1,-7,1,3,6]
+mylist5.sort()
+print(mylist5)
+
+
 
