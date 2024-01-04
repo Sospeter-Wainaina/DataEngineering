@@ -14,4 +14,7 @@ for k,v in Counter(a).items():
 Person = namedtuple(field_names = ['name','age','city'],typename='Person')
 
 p1  = Person('Sospeter',23,'Kiambu')
-print(help(p1))
+print(p1)
+print(p1.name)
+print(p1.age)
+print(p1.city)
