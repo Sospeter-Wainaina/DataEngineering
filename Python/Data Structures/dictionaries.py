@@ -17,3 +17,19 @@ print(mydict2)
 #altrnatively we can use the pop method
 mydict2.pop("age")
 print(mydict2)
+
+# looping in a dictionary
+
+for key in mydict2:
+    print(key)
+
+for k,v in mydict2.items():
+    print(k,v)
+
+# copying a dictionary is similar to copying a list
+mydict3 = mydict2.copy()
+print(mydict3)
+
+# we can also merge two dictionaries
+mydict4 = {**mydict2,**mydict3}
+print(mydict4)
