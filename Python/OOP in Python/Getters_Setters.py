@@ -15,7 +15,7 @@ class Emp:
     def fullname(self,name):
         first, last = name.split('-')
         self.first = first
-        self.last = last1x
+        self.last = last1
 
 employee_1 = Emp('Sospeter','Wainaina',120000)
 employee_2 = Emp('Alice','Nungari',50000)
