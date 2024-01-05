@@ -1,7 +1,7 @@
 # itertools is a module that implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML.
 # Each has been recast in a form suitable for Python.
 
-from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, groupby
+from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, groupby, count, cycle
 import operator
 #product computes the cartesian product of input iterables  (https://en.wikipedia.org/wiki/Cartesian_product)
 a= [1,2]
@@ -45,3 +45,15 @@ a= [1,2,3,4,5,6,7,8,9,10]
 group_obj = groupby(a, key=lambda x:x<5)
 for key,value in group_obj:
     print(key,list(value))
+
+persons = [{'name':'Tim','age':25},{'name':'Dan','age':25},{'name':'Lisa','age':27},{'name':'Claire','age':28}]
+groupobj = groupby(persons, key = lambda x:x['age'])
+for k,v in groupobj:
+    print(k,list(v))
+
+#couunt function starts at tehe given interger and adds one infinitely
+
+for i in count(10):
+    print(i)
+    if i == 15:
+        break
