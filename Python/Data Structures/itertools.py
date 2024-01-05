@@ -39,9 +39,9 @@ print(list(acc))
 # groupby groups the items in an iterable
 
 a= [1,2,3,4,5,6,7,8,9,10]
-def smaller_than_5(x):
-    return x<5
+# def smaller_than_5(x):
+#     return x<5
 
-group_obj = groupby(a, key=smaller_than_5)
+group_obj = groupby(a, key=lambda x:x<5)
 for key,value in group_obj:
     print(key,list(value))
