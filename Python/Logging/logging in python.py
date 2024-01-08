@@ -1,16 +1,21 @@
 import logging
 
-# we can set the logging level
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', filename='app.log', filemode='w')
+logger = logging.getLogger(__name__)
 
-# we can log 5 levels of messages
-# debug
-logging.debug("This is a debug message")
-# info
-logging.info("This in an nfo message")
-# warning
-logging.warning("This is a warning message")
-# error
-logging.error("This is an error message")
-# critical
-logging.critical("This is a critical message")
+# create handler
+stream_h = logging.StreamHandler()
+file_h = logging.FileHandler('file.log')
+
+# level and the format
+stream_h.setLevel(logging.WARNING)
+file_h.setLevel(logging.ERROR)
+
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+stream_h.setFormatter(formatter)
+file_h.setFormatter(formatter)
+
+logger.addHandler(stream_h)
+logger.addHandler(file_h)
+
+logger.warning('This is a warning')
+logger.error('This is an error')
