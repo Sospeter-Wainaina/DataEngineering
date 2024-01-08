@@ -21,3 +21,12 @@ print([x**2 for x in a])
 print(list(filter(lambda x:x%2==0,list(map(lambda x:x**2,a)))))
 
 print([x for x in a if x%2==0])
+
+g = lambda x : x**2
+
+print(g(8))
+a = [1,2,3,4,5,6,7,8,9,10]
+f = map(lambda x:x**2,a)
+print(list(f))
+print([c for c in a if c%2==0])
+print([x**2 for x in a])
