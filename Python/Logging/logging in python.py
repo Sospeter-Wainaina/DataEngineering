@@ -1,5 +1,8 @@
 import logging
 
+# we can set the logging level
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', filename='app.log', filemode='w')
+
 # we can log 5 levels of messages
 # debug
 logging.debug("This is a debug message")
