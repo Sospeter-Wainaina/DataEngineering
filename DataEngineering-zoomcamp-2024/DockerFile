@@ -1,12 +1,5 @@
 FROM python:3.10
 
-WORKDIR /app
-
-ENTRYPOINT ["bash"]
-
-#copy the current directory to ./app
-
-COPY . /app
-
 RUN pip install pandas
 
+ENTRYPOINT ["bash"]
