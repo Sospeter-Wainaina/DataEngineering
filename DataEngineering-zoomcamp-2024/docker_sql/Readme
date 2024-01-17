@@ -1,0 +1,62 @@
+# Docker and PostgreSQL for Data Engineers
+
+## Table of Contents
+
+1. [Docker](#docker)
+   - [What is Docker?](#what-is-docker)
+   - [Why Docker?](#why-docker)
+   - [Installing Docker](#installing-docker)
+2. [Why Data Engineers Should Care About Docker](#why-data-engineers-should-care-about-docker)
+3. [Running PostgreSQL Locally with Docker](#running-postgresql-locally-with-docker)
+4. [Putting Data for Testing to Local PostgreSQL with Python](#putting-data-for-testing-to-local-postgresql-with-python)
+5. [Packaging the Script in Docker](#packaging-the-script-in-docker)
+6. [Running PostgreSQL and the Script in One Network](#running-postgresql-and-the-script-in-one-network)
+7. [Docker Compose and Running pgAdmin and PostgreSQL Together](#docker-compose-and-running-pgadmin-and-postgresql-together)
+8. [SQL: Group By, Joins, Window Function, Union](#sql-group-by-joins-window-function-union)
+
+---
+
+## Docker
+
+### What is Docker?
+
+Docker allows you to encapsulate an application and its dependencies into a container, providing a consistent and isolated environment. A container includes the operating system, system-level libraries, and the application itself. Docker containers can run on any host machine, regardless of its underlying operating system.
+
+### Why Docker?
+
+- **Isolation:** Containers are isolated from the host machine environment, preventing conflicts between different applications and dependencies.
+- **Portability:** Docker containers can run consistently across different environments, making it easy to deploy applications.
+- **Scalability:** Multiple containers can run on a single host without conflict, enabling efficient resource utilization.
+- **Consistency:** Docker ensures that the application behaves the same way in development, testing, and production environments.
+
+### Installing Docker
+
+Install Docker by following the instructions provided in the official documentation: [Docker Installation](https://docs.docker.com/get-docker/).
+
+---
+
+## Why Data Engineers Should Care About Docker
+
+1. **Setting up Locally for Experiments:** Docker simplifies the setup of environments for testing and experimentation.
+2. **Integration Tests and CI/CD:** Docker containers can be used for running integration tests and facilitating continuous integration and deployment pipelines.
+3. **Batch Jobs, Spark, and Serverless:** Docker is valuable in various data engineering scenarios, including running batch jobs, managing Spark clusters, and deploying serverless functions.
+
+---
+
+## Running PostgreSQL Locally with Docker
+
+For practicing SQL, we'll use PostgreSQL, a powerful and versatile database.
+
+To run PostgreSQL locally with Docker, use the following command:
+
+```bash
+docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v "./ny-taxi-volume:/var/lib/postgresql/data" \
+  -p 5433:5432 \
+  postgres:13
+```
+
+For this case I mapped 5433 to 5432 in the container to avoid conflicts with my localy installed postgres db which uses the same port
