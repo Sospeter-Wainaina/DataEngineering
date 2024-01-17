@@ -22,7 +22,7 @@ emp_2.email = 'Alice.Nungari@gmail.com'
 emp_2.pay = 50000
 
 print(emp_1.email)
-print(emp_2.email)
+print(emp_2.email1)
 
 #This is a lot of work and we can use a constructor to make it easier
 # a constructor is a function that runs automatically when we create an instance of a class
