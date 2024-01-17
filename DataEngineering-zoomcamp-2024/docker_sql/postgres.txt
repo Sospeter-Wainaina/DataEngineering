@@ -6,3 +6,11 @@ docker run -it \
     -p 5433:5432 \
     --name pg14 \
     postgres:14
+docker run -it \
+    -e POSTGRES_USER="root" \
+    -e POSTGRES_PASSWORD="root" \
+    -e POSTGRES_DB="ny_taxi" \
+    -v $(pwd)/my_taxi_postgres_data/:/var/lib/postgresql/data \
+    -p 5433:5432 \
+    --name pg14 \
+    postgres:14
