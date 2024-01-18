@@ -55,8 +55,10 @@ docker run -it \
   -e POSTGRES_PASSWORD="root" \
   -e POSTGRES_DB="ny_taxi" \
   -v "./ny-taxi-volume:/var/lib/postgresql/data" \
+  --network=pg-network \
+  --name pg-database \
   -p 5433:5432 \
-  postgres:13
+  postgres:14
 ```
 
 For this case I mapped 5433 to 5432 in the container to avoid conflicts with my localy installed postgres db which uses the same port
@@ -70,8 +72,15 @@ To pull and run the docker image containing the pgadmin4:
 ```bash
 docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
-  -e PGADMIN_DEFAULT_EMAIL="root" \
-  -e POSTGRES_DB="ny_taxi" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
   -p 8080:80 \
+  --network=pg-network \
+  --name pg-admin \
   dpage/pgadmin4
+```
+
+So when we try connecting to the pgadmin4 via `localhost:8080` We can now connect. To connect to the postgres database which is in another different container we will need to put them in the same network so that they can be able to communicate to do that we willuse the following command to create a network:
+
+```
+docker network create pg-network
 ```
