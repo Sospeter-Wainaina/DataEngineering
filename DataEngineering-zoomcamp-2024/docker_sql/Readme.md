@@ -71,7 +71,6 @@ To pull and run the docker image containing the pgadmin4:
 docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
   -e PGADMIN_DEFAULT_EMAIL="root" \
-  -e POSTGRES_DB="ny_taxi" \
   -p 8080:80 \
   dpage/pgadmin4
 ```
