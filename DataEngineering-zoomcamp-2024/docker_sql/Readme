@@ -60,3 +60,18 @@ docker run -it \
 ```
 
 For this case I mapped 5433 to 5432 in the container to avoid conflicts with my localy installed postgres db which uses the same port
+
+The pgcli is a CLI and its not really convenient when it comes to running commands and seeing the tables. for that we are going to use a web based GUI where we can run our queries and see how the data looks like. To pull the image and run it we will go to the following link.
+
+[PgAdmin4 Installation](https://www.pgadmin.org/download/).
+
+To pull and run the docker image containing the pgadmin4:
+
+```bash
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_EMAIL="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -p 8080:80 \
+  dpage/pgadmin4
+```
