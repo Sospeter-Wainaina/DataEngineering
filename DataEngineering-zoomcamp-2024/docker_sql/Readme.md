@@ -74,8 +74,12 @@ docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
   -e PGADMIN_DEFAULT_PASSWORD="root" \
   -p 8080:80 \
+<<<<<<< HEAD
   --network=pg-network \
   --name pg-admin \
+=======
+  --name pgadmin \
+>>>>>>> ef00b95898c72a9c13729e09be569bca5e7e0579
   dpage/pgadmin4
 ```
 
