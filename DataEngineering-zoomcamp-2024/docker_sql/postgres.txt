@@ -18,3 +18,13 @@ docker run -it \
 from sqlalchemy import create_engine
 
 engine = create_engine('postgresql://root:root@localhost:5433/ny_taxi')
+
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-07.csv.gz"
+python ingest_data.py \
+    --user=root \
+    --password=root \
+    --host=localhost \
+    --port=5433 \
+    --dbname=ny_taxi \
+    --tbname=yellow_taxi_data \
+    --url=${URL}
