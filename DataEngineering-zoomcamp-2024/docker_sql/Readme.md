@@ -70,7 +70,14 @@ To pull and run the docker image containing the pgadmin4:
 ```bash
 docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
-  -e PGADMIN_DEFAULT_EMAIL="root" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
   -p 8080:80 \
+  --name pgadmin \
   dpage/pgadmin4
+```
+
+So when we try connecting to the pgadmin4 via `localhost:8080` We can now connect. To connect to the postgres database which is in another different container we will need to put them in the same network so that they can be able to communicate to do that we willuse the following command to create a network:
+
+```
+docker network create pg-network
 ```
