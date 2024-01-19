@@ -7,4 +7,4 @@ WORKDIR /app
 
 COPY ingest_data.py /app/ingest_data.py
 
-ENTRYPOINT ["python", "pipeline.py"]
+ENTRYPOINT ["python", "ingest_data.py"]
