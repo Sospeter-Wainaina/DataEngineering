@@ -4,7 +4,7 @@ RUN apt-get install curl
 RUN pip install sqlalchemy psycopg2 pandas requests
 
 WORKDIR /app
-RUN MKDIR /app/my_taxi_postgres_data
+RUN mkdir /app/my_taxi_postgres_data
 
 
 COPY ingest_data.py /app/ingest_data.py
