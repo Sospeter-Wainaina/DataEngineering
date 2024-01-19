@@ -1,9 +1,10 @@
 FROM python:3.10
 
-RUN pip install pandas
+RUN apt-get install curl
+RUN pip install sqlalchemy psycopg2 pandas
 
 WORKDIR /app
 
-COPY pipeline.py /app/pipeline.py
+COPY ingest_data.py /app/ingest_data.py
 
 ENTRYPOINT ["python", "pipeline.py"]
