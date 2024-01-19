@@ -1,7 +1,7 @@
 FROM python:3.10
 
 RUN apt-get install curl
-RUN pip install sqlalchemy psycopg2 pandas
+RUN pip install sqlalchemy psycopg2 pandas requests
 
 WORKDIR /app
 

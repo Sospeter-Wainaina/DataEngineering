@@ -30,3 +30,12 @@ python ingest_data.py \
     --url=${URL}
 
 docker build -t taxi_ingest:v001 .
+
+docker run taxi_ingest:v001 \
+    --user=root \
+    --password=root \
+    --host=localhost \
+    --port=5433 \
+    --dbname=ny_taxi \
+    --tbname=yellow_taxi_data \
+    --url=${URL}
