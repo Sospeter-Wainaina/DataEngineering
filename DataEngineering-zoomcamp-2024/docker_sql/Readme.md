@@ -88,3 +88,33 @@ So when we try connecting to the pgadmin4 via `localhost:8080` We can now connec
 ```
 docker network create pg-network
 ```
+
+so what we need to do next is to convert our notebook into a script so that we can run it from our terminal. The way we can do that is by using the `nbconvert` see below:
+
+`jupyter nbconvert --to script [NOTEBOOK].ipynb`
+
+It will need some cleaning and we need to add some code so that we can pass some arguments when executing our script such as :
+_ user
+_ password
+_ host
+_ port
+_ dbname
+_ tablename \* url
+That can be made possible through a module in python known as argparse
+You can find documentation in the following link: [argparse](https://docs.python.org/3/library/argparse.html).
+
+After that now we will pass arguments to our script like so:
+
+```
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-07.csv.gz"
+python ingest_data.py \
+    --user=root \
+    --password=root \
+    --host=localhost \
+    --port=5433 \
+    --dbname=ny_taxi \
+    --tbname=yellow_taxi_data \
+    --url=${URL}
+```
+
+And it will pulate data in our postgres database
