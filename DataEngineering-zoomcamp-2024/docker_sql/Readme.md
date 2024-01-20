@@ -76,7 +76,6 @@ docker run -it \
   -p 8080:80 \
   --network=pg-network \
   --name pg-admin \
-  --name pgadmin \
   dpage/pgadmin4
 ```
 
