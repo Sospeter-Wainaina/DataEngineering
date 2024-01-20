@@ -118,7 +118,7 @@ And it will populate data in our postgres database
 
 Now next we are going to dockerize everything instead of running it in our localhost and the way we are going to do that is by altering our docker file and write instructions that will install any libraries and create any directories that our code might require. Then we will build it and run our image.
 
-To create our image we will run this cli comand in our terminal:
+To create our image we will run this cli command in our terminal:
 bash
 
 ```
