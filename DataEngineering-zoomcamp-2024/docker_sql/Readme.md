@@ -79,7 +79,7 @@ docker run -it \
   dpage/pgadmin4
 ```
 
-So when we try connecting to the pgadmin4 via `localhost:8080` We can now connect. To connect to the postgres database which is in another different container we will need to put them in the same network so that they can be able to communicate to do that we willuse the following command to create a network:
+So when we try connecting to the pgadmin4 via `localhost:8080` We can now connect. To connect to the postgres database which is in another different container we will need to put them in the same network so that they can be able to communicate to do that we will use the following command to create a network:
 
 ```
 docker network create pg-network

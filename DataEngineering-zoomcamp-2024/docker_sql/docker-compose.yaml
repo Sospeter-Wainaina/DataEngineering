@@ -1,19 +1,36 @@
 services:
-  pgdatabase:
+  mydatabase:
     image: postgres:14
     environment:
-      - POSTGRES_USER= root
-      - POSTGRES_PASSWORD= root
-      - POSTGRES_DB= ny_taxi
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ny_taxi
     volumes:
       - ./ny-taxi-volume:/var/lib/postgresql/data:rw
     ports:
-      - 5433:5432
+      - "5432:5432"
 
   pgadmin:
     image: dpage/pgadmin4
     environment:
-      - PGADMIN_DEFAULT_EMAIL="admin@admin.com"
-      - PGADMIN_DEFAULT_PASSWORD="root"
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
     ports:
-      - 8080:80
+      - "8080:80"
+    depends_on:
+      - mydatabase
+
+  pgcli:
+    image: postgres:14
+    command:
+      [
+        "pgcli",
+        "--host",
+        "mydatabase",
+        "--user",
+        "root",
+        "--database",
+        "ny_taxi",
+      ]
+    depends_on:
+      - mydatabase
