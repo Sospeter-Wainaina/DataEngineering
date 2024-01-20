@@ -74,12 +74,9 @@ docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
   -e PGADMIN_DEFAULT_PASSWORD="root" \
   -p 8080:80 \
-<<<<<<< HEAD
   --network=pg-network \
   --name pg-admin \
-=======
   --name pgadmin \
->>>>>>> ef00b95898c72a9c13729e09be569bca5e7e0579
   dpage/pgadmin4
 ```
 
@@ -117,4 +114,28 @@ python ingest_data.py \
     --url=${URL}
 ```
 
-And it will pulate data in our postgres database
+And it will populate data in our postgres database
+
+Now next we are going to dockerize everything instead of running it in our localhost and the way we are going to do that is by altering our docker file and write instructions that will install any libraries and create any directories that our code might require. Then we will build it and run our image.
+
+To create our image we will run this cli comand in our terminal:
+bash
+
+```
+docker build -t taxi_ingest:v001 .
+```
+
+We will then run and assign it a terminal ans we want it to be interactive:
+
+```
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-07.csv.gz"
+docker run -it taxi_ingest:v001 \
+    --network=pg-network
+    --user=root \
+    --password=root \
+    --host=localhost \
+    --port=5433 \
+    --dbname=ny_taxi \
+    --tbname=yellow_taxi_data \
+    --url=${URL}
+```
