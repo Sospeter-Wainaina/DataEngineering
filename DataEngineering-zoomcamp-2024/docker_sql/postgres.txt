@@ -32,12 +32,16 @@ python ingest_data.py \
 docker build -t taxi_ingest:v001 .
 
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-07.csv.gz"
-docker run -it taxi_ingest:v001 \
-    --network=pg-network
-    --user=root \
-    --password=root \
-    --host=localhost \
-    --port=5433 \
+docker run -it  --network=docker_sql_default \
+    taxi_ingest:v001 \
+    --user=postgres \
+    --password=postgres \
+    --host=mydatabase \
+    --port=5432 \
     --dbname=ny_taxi \
     --tbname=yellow_taxi_data \
     --url=${URL}
+
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-07.csv.gz"
+
+docker build -t build -t taxi_ingest:v001 --network=docker_sql_default .

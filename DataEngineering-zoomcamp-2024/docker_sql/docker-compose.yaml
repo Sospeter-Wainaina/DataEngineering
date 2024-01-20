@@ -19,18 +19,3 @@ services:
       - "8080:80"
     depends_on:
       - mydatabase
-
-  pgcli:
-    image: postgres:14
-    command:
-      [
-        "pgcli",
-        "--host",
-        "mydatabase",
-        "--user",
-        "root",
-        "--database",
-        "ny_taxi",
-      ]
-    depends_on:
-      - mydatabase
