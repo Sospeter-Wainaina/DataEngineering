@@ -1,0 +1,31 @@
+docker run -it \
+    -e POSTGRES_USER="root" \
+    -e POSTGRES_PASSWORD="root" \
+    -v $(pwd)/my_taxi_postgres_data/:/var/lib/postgresql/data \
+    -p 5433:5432 \
+    --name pg14 \
+    postgres:14
+
+docker run -it \
+    -e POSTGRES_USER="root" \
+    -e POSTGRES_PASSWORD="root" \
+    -v $(pwd)/my_taxi_postgres_data/:/var/lib/postgresql/data \
+    -p 5433:5432 \
+    -e POSTGRES_DB="homework" \
+    --name homework \
+    postgres:14
+
+--root@localhost:homework> SELECT MAX(trip_distance),DATE_PART('day',lpep_pickup_datetime) from yellow_tax 
+ i_data where lpep_pickup_datetime BETWEEN '2019-09-16' AND '2019-09-26'  and date_part('day',lpep_picku 
+ p_datetime) in (18,16,26,21) GROUP BY DATE_PART('day',lpep_pickup_datetime)
++--------+-----------+
+| max    | date_part |
+|--------+-----------|
+| 114.3  | 16.0      |
+| 70.28  | 18.0      |
+| 135.53 | 21.0      |
+| 0.0    | 26.0      |
++--------+-----------+
+SELECT 4
+Time: 0.063s
+root@localhost:homework>
