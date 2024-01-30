@@ -17,3 +17,16 @@
 --(108, 'kamal', '8000', '11');
 --Problem Statement:
 /* Write SQL to return all employee whose salary is same in same department*/
+with dept_sal as(
+    select dept_id,
+        salary
+    from emp_salary
+    group by dept_id,
+        salary
+    having count(2) > 1
+)
+select emp_id,
+    name
+from emp_salary e
+    inner join dept_sal d on e.dept_id = d.dept_id
+where e.salary = d.salary
