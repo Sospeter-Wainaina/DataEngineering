@@ -14,3 +14,10 @@
 --,(3,'2022-01-02','private room,shared room')
 --,(4,'2022-01-03','private room')
 --;
+-- SOLUTION
+select value,
+    count(value) no_searched
+from airbnb_searches
+    cross apply string_split(filter_room_types, ',')
+group by value
+order by no_searched desc
