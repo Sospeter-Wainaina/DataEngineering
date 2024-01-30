@@ -15,3 +15,5 @@
 --(105, 'suresh', '4000', '12'),
 --(109, 'mahesh', '7000', '12'),
 --(108, 'kamal', '8000', '11');
+--Problem Statement:
+/* Write SQL to return all employee whose salary is same in same department*/
