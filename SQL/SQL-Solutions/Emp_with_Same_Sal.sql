@@ -29,4 +29,18 @@ select emp_id,
     name
 from emp_salary e
     inner join dept_sal d on e.dept_id = d.dept_id
-where e.salary = d.salary
+where e.salary = d.salary ----Solution 2
+    with dept_sal as(
+        select dept_id,
+            salary
+        from emp_salary
+        group by dept_id,
+            salary
+        having count(2) = 1
+    )
+select e.*
+from emp_salary e
+    left join dept_sal d on e.dept_id = d.dept_id
+    and e.salary = d.salary
+where d.dept_id is null
+order by d.dept_id
