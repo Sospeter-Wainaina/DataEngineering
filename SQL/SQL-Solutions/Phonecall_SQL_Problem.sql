@@ -42,4 +42,27 @@ select phone_number,
     max(call_time) as end_time
 from all_calls
 group by phone_number,
-    rn
+    rn --solution 2
+select *,
+    DATEDIFF(minute, start_time, end_time) as minutes_taken
+from (
+        (
+            select phone_number,
+                ROW_NUMBER() OVER(
+                    PARTITION BY phone_number
+                    order by start_time
+                ) as rn,
+                start_time
+            from call_start_logs s
+        ) a
+        inner join (
+            select phone_number,
+                ROW_NUMBER() OVER(
+                    PARTITION BY phone_number
+                    order by end_time
+                ) as rn,
+                end_time
+            from call_end_logs e
+        ) b on a.phone_number = b.phone_number
+        and a.rn = b.rn
+    )
