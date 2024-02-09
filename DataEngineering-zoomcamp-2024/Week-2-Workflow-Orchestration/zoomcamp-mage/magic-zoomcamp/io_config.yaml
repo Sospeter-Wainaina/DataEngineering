@@ -135,6 +135,6 @@ dev:
 
 
   REDSHIFT_DBNAME: "dev"
-  REDSHIFT_CLUSTER_ID: "red-cluster"
-  REDSHIFT_IAM_PROFILE: "mage_access"
+  REDSHIFT_CLUSTER_ID: "redshift-cster-1"
+  REDSHIFT_IAM_PROFILE: "special_mahe_access"
   REDSHIFT_DBUSER: "awsuser"
