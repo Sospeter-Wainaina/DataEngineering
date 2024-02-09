@@ -1,0 +1,32 @@
+[2024-02-07T07:01:52.936+0000] {processor.py:161} INFO - Started process (PID=75) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:01:52.939+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2024-02-07T07:01:52.946+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:52.945+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:01:52.972+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:01:53.228+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.226+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:example_setup_teardown
+[2024-02-07T07:01:53.260+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.260+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:example_setup_teardown
+[2024-02-07T07:01:53.285+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.284+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:example_setup_teardown
+[2024-02-07T07:01:53.287+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.286+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-07T07:01:53.316+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.315+0000] {dag.py:3058} INFO - Creating ORM DAG for example_setup_teardown
+[2024-02-07T07:01:53.359+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:01:53.358+0000] {dag.py:3823} INFO - Setting next_dagrun for example_setup_teardown to 2024-02-06 00:00:00+00:00, run_after=2024-02-07 00:00:00+00:00
+[2024-02-07T07:01:53.409+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py took 0.485 seconds
+[2024-02-07T07:02:23.539+0000] {processor.py:161} INFO - Started process (PID=130) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:23.541+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2024-02-07T07:02:23.545+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:23.545+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:23.556+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:23.597+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:23.596+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-07T07:02:23.673+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:23.672+0000] {dag.py:3823} INFO - Setting next_dagrun for example_setup_teardown to 2024-02-06 00:00:00+00:00, run_after=2024-02-07 00:00:00+00:00
+[2024-02-07T07:02:23.737+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py took 0.202 seconds
+[2024-02-07T07:02:53.906+0000] {processor.py:161} INFO - Started process (PID=185) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:53.908+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2024-02-07T07:02:53.912+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:53.911+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:53.927+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:02:53.974+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:53.973+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-07T07:02:54.044+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:02:54.044+0000] {dag.py:3823} INFO - Setting next_dagrun for example_setup_teardown to 2024-02-06 00:00:00+00:00, run_after=2024-02-07 00:00:00+00:00
+[2024-02-07T07:02:54.095+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py took 0.195 seconds
+[2024-02-07T07:03:28.455+0000] {processor.py:161} INFO - Started process (PID=241) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:03:28.461+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2024-02-07T07:03:28.467+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:03:28.466+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:03:28.501+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py
+[2024-02-07T07:03:28.634+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:03:28.633+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-07T07:03:28.741+0000] {logging_mixin.py:188} INFO - [2024-02-07T07:03:28.740+0000] {dag.py:3823} INFO - Setting next_dagrun for example_setup_teardown to 2024-02-06 00:00:00+00:00, run_after=2024-02-07 00:00:00+00:00
+[2024-02-07T07:03:28.838+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_setup_teardown.py took 0.400 seconds
