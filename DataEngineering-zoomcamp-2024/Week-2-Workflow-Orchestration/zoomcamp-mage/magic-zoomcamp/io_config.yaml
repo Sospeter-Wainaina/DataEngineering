@@ -132,11 +132,9 @@ dev:
   POSTGRES_PASSWORD: "{{ env_var('POSTGRES_PASSWORD')}}"
   POSTGRES_HOST: "{{ env_var('POSTGRES_HOST')}}"
   POSTGRES_PORT: "{{ env_var('POSTGRES_PORT')}}"
-  #            # Optional
-  #AWS_ACCESS_KEY_ID: "AKIAYS2NUASAAJQO6BNX"
-  #AWS_SECRET_ACCESS_KEY: "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"
+
 
   REDSHIFT_DBNAME: "dev"
-  REDSHIFT_CLUSTER_ID: "redshift-cluster-1"
-  REDSHIFT_IAM_PROFILE: "special_mage_access"
+  REDSHIFT_CLUSTER_ID: "red-cluster"
+  REDSHIFT_IAM_PROFILE: "mage_access"
   REDSHIFT_DBUSER: "awsuser"
