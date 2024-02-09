@@ -169,7 +169,6 @@ node_modules
 scratch*
 /mage_data*
 *secrets*.json
-magic-zoomcamp
 *.json
 
 new_mage_project_connect.pem
