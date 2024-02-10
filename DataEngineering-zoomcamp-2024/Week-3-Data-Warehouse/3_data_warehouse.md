@@ -34,7 +34,7 @@ This lesson will cover the topics of _Data Warehouse_ and _BigQuery_.
 
 _[Video source](https://www.youtube.com/watch?v=jrHljAoD6nM&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)_
 
-In Data Sxience, when we're discussing data processing systems, there are 2 main types: **OLAP** and **OLTP** systems.
+In Data Science, when we're discussing data processing systems, there are 2 main types: **OLAP** and **OLTP** systems.
 
 - **_OLTP_**: Online Transaction Processing.
 - **_OLAP_**: Online Analytical Processing.
