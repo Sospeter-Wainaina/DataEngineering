@@ -3,8 +3,8 @@ default:
   # Default profile created for data IO access.
   # Add your credentials for the source you use, and delete the rest.
   # AWS
-  AWS_ACCESS_KEY_ID: ""
-  AWS_SECRET_ACCESS_KEY: ""
+  AWS_ACCESS_KEY_ID: "{{ env_var('AWS_ACCESS_KEY_ID') }}"
+  AWS_SECRET_ACCESS_KEY: "{{ env_var('AWS_SECRET_ACCESS_KEY') }}"
   AWS_SESSION_TOKEN: session_token (Used to generate Redshift credentials)
   AWS_REGION: us-east-1
   # Azure
@@ -133,8 +133,12 @@ dev:
   POSTGRES_HOST: "{{ env_var('POSTGRES_HOST')}}"
   POSTGRES_PORT: "{{ env_var('POSTGRES_PORT')}}"
 
-
+# Redshift
   REDSHIFT_DBNAME: "dev"
   REDSHIFT_CLUSTER_ID: "redshift-cluster-1"
   REDSHIFT_IAM_PROFILE: "special_mage_access"
   REDSHIFT_DBUSER: "awsuser"
+# AWS 
+  AWS_ACCESS_KEY_ID: "{{ env_var('AWS_ACCESS_KEY_ID') }}"
+  AWS_SECRET_ACCESS_KEY: "{{ env_var('AWS_SECRET_ACCESS_KEY') }}"
+  AWS_REGION: "us-east-1"
