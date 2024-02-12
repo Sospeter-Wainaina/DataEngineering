@@ -95,7 +95,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-10 08:46:53'
+updated_at: '2024-02-10 15:25:21'
 uuid: green_taxi_etl
 variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []
