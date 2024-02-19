@@ -1,0 +1,21 @@
+@data_exporter
+def export_data(data, *args, **kwargs):
+    try:
+        data['tpep_pickup_date'] = pd.to_datetime(data['tpep_pickup_datetime'], format='%Y-%m-%d')
+        data['tpep_pickup_date'] = data['tpep_pickup_date'].dt.date  # Truncate to days
+        table = pa.Table.from_pandas(data)
+
+        s3 = fs.S3FileSystem(
+        allow_bucket_creation=True)
+        pq.write_to_dataset(
+            table,
+            root_path=root_path,
+            filesystem=s3,
+            existing_data_behavior="overwrite_or_ignore"
+        )
+
+        print("Data exported successfully.")
+    except Exception as e:
+        print(f"Error exporting data: {e}")
+
+
