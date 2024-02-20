@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: staging
+    database: production
+    schema: ny_schema
+
+    tables:
+      - name: green_tripdata
+      - name: yellow_tripdata
