@@ -5,7 +5,7 @@ sources:
     database: dev
      # For postgres:
       #database: production
-    schema: a
+    schema: public
 
       # loaded_at_field: record_loaded_at
     tables:
