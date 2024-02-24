@@ -29,7 +29,7 @@ models:
         description: "unique identifier conformed by the combination of vendorid and pickyp time"
 
       - name: vendorid
-        data_type: int64
+        data_type: string
         description: ""
 
       - name: service_type
