@@ -13,6 +13,9 @@ DataEngineering-zoomcamp-2024/Week-2-Workflow-Orchestration/zoomcamp-mage/magic-
 DataEngineering-zoomcamp-2024/Week-2-Workflow-Orchestration/zoomcamp-mage/magic-zoomcamp/io_config.yaml
 DataEngineering-zoomcamp-2024/Week-3-Data-Warehouse/.env
 DataEngineering-zoomcamp-2024/batch-processing/new_mage_project_connect.pem
+<<<<<<< HEAD
 DataEngineering-zoomcamp-2024/batch-processing/data/fhvhv/2021/01
 DataEngineering-zoomcamp-2024/batch-processing/data/fhvhv_tripdata_2021-01.parquet
 DataEngineering-zoomcamp-2024/batch-processing/code/fhvhv_tripdata_2021-01.parquet
+=======
+>>>>>>> 5e858df7c3bd6763ca17edf52338b9e49b50402f
