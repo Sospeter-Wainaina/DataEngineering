@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#!/e/my-learnings/merge/DataEngineering/DataEngineering-zoomcamp-2024/Workshop-2-risingwave/.venv/Scripts/python
+
 
 import datetime
 import random
