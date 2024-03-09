@@ -32,8 +32,7 @@ but the max trip time is 10 minutes and 20 minutes respectively.
 
 Options:
 
-#### 1. Yorkville East, Steinway
-
+1. **Yorkville East, Steinway**
 2. Murray Hill, Midwood
 3. East Flatbush/Farragut, East Harlem North
 4. Midtown Center, University Heights/Morris Heights
@@ -73,8 +72,7 @@ Options:
 1. 5
 2. 3
 3. 10
-
-#### 4. 1
+4. **1**
 
 ### Solution
 
@@ -126,9 +124,7 @@ NOTE: For this question `17 hours` was picked to ensure we have enough data to w
 Options:
 
 1. Clinton East, Upper East Side North, Penn Station
-
-#### 2. LaGuardia Airport, Lincoln Square East, JFK Airport
-
+2. **LaGuardia Airport, Lincoln Square East, JFK Airport**
 3. Midtown Center, Upper East Side South, Upper East Side North
 4. LaGuardia Airport, Midtown Center, Upper East Side North
 
